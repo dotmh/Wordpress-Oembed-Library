@@ -4,6 +4,8 @@ DOT MH OEMBED WORDPRESS LIBRARY
 A library to be used within plugins or themes to allow easier access to an oembed endpoint 
 please see http://oembed.com/ for the oembed specification 
 
+In all examples the var $embed is an instance of this class
+
 PLEASE NOTE : This is NOT a wordpress plugin.
 
 Usage 
@@ -83,7 +85,15 @@ The actual data that is returned depends on the resource that you requested to e
 	}
 ```
 
-for more information on the responses again see http://oembed.com/
+for more information on the responses again see http://oembed.com/.
+
+Please note : Open graph properties must be retrived using camel case for example
+
+to get og:description use 
+
+```php
+	$embed->ogDescription
+```
 
 Exceptions
 ----------

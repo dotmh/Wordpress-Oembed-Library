@@ -202,6 +202,8 @@ class dotmh_embed
 	**/
 	public function __get($name) {
 		
+		$name = strtolower(preg_replace('/([A-Z])/', ':$1', $name));
+
 		if ( array_key_exists($name, $this->data ) ) {
 			return $this->data[$name];
 		}
